@@ -28,9 +28,9 @@
       "image": "praqma/network-multitool:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-address": "172.20.20.10",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "2001:172:20:20::4",
+      "mgmt-ipv6-address": "2001:172:20:20::a",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
@@ -100,12 +100,6 @@
         {
           "host-ip": "",
           "host-port": 0,
-          "port": 11443,
-          "protocol": "tcp"
-        },
-        {
-          "host-ip": "",
-          "host-port": 0,
           "port": 1180,
           "protocol": "tcp"
         },
@@ -119,6 +113,12 @@
           "host-ip": "",
           "host-port": 0,
           "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
           "protocol": "tcp"
         }
       ]
@@ -134,9 +134,9 @@
       "image": "praqma/network-multitool:latest",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-address": "172.20.20.7",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "2001:172:20:20::5",
+      "mgmt-ipv6-address": "2001:172:20:20::7",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
@@ -153,18 +153,6 @@
         {
           "host-ip": "",
           "host-port": 0,
-          "port": 11443,
-          "protocol": "tcp"
-        },
-        {
-          "host-ip": "",
-          "host-port": 0,
-          "port": 1180,
-          "protocol": "tcp"
-        },
-        {
-          "host-ip": "",
-          "host-port": 0,
           "port": 443,
           "protocol": "tcp"
         },
@@ -172,6 +160,18 @@
           "host-ip": "",
           "host-port": 0,
           "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 11443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 1180,
           "protocol": "tcp"
         }
       ]
@@ -216,9 +216,9 @@
       "image": "frrouting/frr:v7.5.1",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.10",
+      "mgmt-ipv4-address": "172.20.20.4",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "2001:172:20:20::a",
+      "mgmt-ipv6-address": "2001:172:20:20::4",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
@@ -245,9 +245,9 @@
       "image": "frrouting/frr:v7.5.1",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.9",
+      "mgmt-ipv4-address": "172.20.20.5",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "2001:172:20:20::9",
+      "mgmt-ipv6-address": "2001:172:20:20::5",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
@@ -274,9 +274,9 @@
       "image": "frrouting/frr:v7.5.1",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-address": "172.20.20.9",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "2001:172:20:20::7",
+      "mgmt-ipv6-address": "2001:172:20:20::9",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
@@ -298,13 +298,13 @@
       "a": {
         "node": "router1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:4b:f4:68",
+        "mac": "aa:c1:ab:20:68:e9",
         "peer": "z"
       },
       "z": {
         "node": "router4",
         "interface": "eth1",
-        "mac": "aa:c1:ab:85:2f:74",
+        "mac": "aa:c1:ab:5a:3a:28",
         "peer": "a"
       }
     },
@@ -312,13 +312,13 @@
       "a": {
         "node": "router2",
         "interface": "eth1",
-        "mac": "aa:c1:ab:0d:06:8e",
+        "mac": "aa:c1:ab:8e:4b:f2",
         "peer": "z"
       },
       "z": {
         "node": "router4",
         "interface": "eth2",
-        "mac": "aa:c1:ab:2a:61:14",
+        "mac": "aa:c1:ab:dc:4a:be",
         "peer": "a"
       }
     },
@@ -326,13 +326,13 @@
       "a": {
         "node": "router3",
         "interface": "eth1",
-        "mac": "aa:c1:ab:c1:0d:c4",
+        "mac": "aa:c1:ab:f0:a0:f0",
         "peer": "z"
       },
       "z": {
         "node": "router4",
         "interface": "eth3",
-        "mac": "aa:c1:ab:41:f5:fe",
+        "mac": "aa:c1:ab:19:64:78",
         "peer": "a"
       }
     },
@@ -340,13 +340,13 @@
       "a": {
         "node": "PC1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:19:f4:d6",
+        "mac": "aa:c1:ab:f7:38:ec",
         "peer": "z"
       },
       "z": {
         "node": "router1",
         "interface": "eth2",
-        "mac": "aa:c1:ab:f9:b5:b1",
+        "mac": "aa:c1:ab:39:d3:7f",
         "peer": "a"
       }
     },
@@ -354,13 +354,13 @@
       "a": {
         "node": "PC2",
         "interface": "eth1",
-        "mac": "aa:c1:ab:ef:fb:3a",
+        "mac": "aa:c1:ab:be:58:b1",
         "peer": "z"
       },
       "z": {
         "node": "router2",
         "interface": "eth2",
-        "mac": "aa:c1:ab:23:34:67",
+        "mac": "aa:c1:ab:a4:5c:b8",
         "peer": "a"
       }
     },
@@ -368,13 +368,13 @@
       "a": {
         "node": "PC3",
         "interface": "eth1",
-        "mac": "aa:c1:ab:d2:5e:8b",
+        "mac": "aa:c1:ab:79:ec:07",
         "peer": "z"
       },
       "z": {
         "node": "router3",
         "interface": "eth2",
-        "mac": "aa:c1:ab:fa:e9:3e",
+        "mac": "aa:c1:ab:c8:52:0e",
         "peer": "a"
       }
     }
