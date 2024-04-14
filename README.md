@@ -21,5 +21,5 @@ sudo ./ping.sh
 ```
 6.  test and log router to router 
 ```
-sudo ./logging
+sudo ./logging.sh
 ```
