@@ -1,9 +1,9 @@
 name: project
 
 topology:
-  # defaults:
-  #   kind: linux
-  #   image: praqma/network-multitool:latest
+  defaults:
+    kind: linux
+    image: praqma/network-multitool:latest
   nodes:
     router1:
       kind: linux
@@ -32,14 +32,20 @@ topology:
         - router4/frr.conf:/etc/frr/frr.conf
 
     PC1:
-      kind: linux
-      image: praqma/network-multitool:latest
+      exec:
+        - ip addr add 192.168.4.2/24 dev eth1
+        - ip route replace 0/0 via 192.168.4.1
+      
     PC2:
-      kind: linux
-      image: praqma/network-multitool:latest
+      exec:
+        - ip addr add 192.168.5.2/24 dev eth1
+        - ip route replace 0/0 via 192.168.5.1
+      
     PC3:
-      kind: linux
-      image: praqma/network-multitool:latest
+      exec:
+        - ip addr add 192.168.6.2/24 dev eth1
+        - ip route replace 0/0 via 192.168.6.1
+      
 
   links:
     - endpoints: ["router1:eth1", "router4:eth1"]

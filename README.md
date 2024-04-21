@@ -3,17 +3,17 @@
 ```
 sudo systemctl start docker
 ```
-2. start demo
+2. start project
  ```
 sudo ./run.sh 
 ```
-3. stop demo
+3. stop project
 ```
-clab destroy --topo demo.yml
+clab destroy --topo project.yml
 ```
-4. show demo graph
+4. show project graph
 ```
-sudo containerlab graph --topo demo.yml
+sudo containerlab graph --topo project.yml
 ```
 5. test PC to router
 ```

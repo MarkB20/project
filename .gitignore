@@ -1,2 +1,5 @@
 # Ignore clab-project folder
 clab-project/
+
+# Ignore project.yml.bak file
+project.yml.bak
