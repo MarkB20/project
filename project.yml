@@ -49,7 +49,7 @@ topology:
 
   links:
     - endpoints: ["router1:eth1", "router4:eth1"]
-    # - endpoints: ["router1:eth3", "router2:eth3"]
+    - endpoints: ["router1:eth3", "router2:eth3"]
     - endpoints: ["router2:eth1", "router4:eth2"]
     - endpoints: ["router3:eth1", "router4:eth3"]
     - endpoints: ["PC1:eth1", "router1:eth2"]
