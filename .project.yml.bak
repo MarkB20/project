@@ -48,7 +48,6 @@ topology:
     srlrouter1:
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux
-      startup-config:
       
     PC1:
       exec:
