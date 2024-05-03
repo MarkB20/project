@@ -19,6 +19,9 @@ capture_traffic() {
 capture_traffic "router4" "eth1"
 capture_traffic "router4" "eth2"
 capture_traffic "router4" "eth3"
+capture_traffic "router4" "eth4"
+capture_traffic "router4" "eth5"
+capture_traffic "router4" "eth6"
 
 
 

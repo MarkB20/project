@@ -23,14 +23,33 @@ topology:
       binds:
         - router3/daemons:/etc/frr/daemons
         - router3/frr.conf:/etc/frr/frr.conf
-
+    
     router4:
       kind: linux
       image: frrouting/frr:v7.5.1
       binds:
         - router4/daemons:/etc/frr/daemons
         - router4/frr.conf:/etc/frr/frr.conf
+    
+    router5:
+      kind: linux
+      image: frrouting/frr:v7.5.1
+      binds:
+        - router5/daemons:/etc/frr/daemons
+        - router5/frr.conf:/etc/frr/frr.conf
 
+    routerHub:
+      kind: linux
+      image: frrouting/frr:v7.5.1
+      binds:
+        - routerHub/daemons:/etc/frr/daemons
+        - routerHub/frr.conf:/etc/frr/frr.conf
+    
+    srlrouter1:
+      kind: nokia_srlinux
+      image: ghcr.io/nokia/srlinux
+      startup-config:
+      
     PC1:
       exec:
         - ip addr add 192.168.4.2/24 dev eth1
@@ -45,13 +64,35 @@ topology:
       exec:
         - ip addr add 192.168.6.2/24 dev eth1
         - ip route replace 0/0 via 192.168.6.1
+
+    PC4:
+      exec:
+        - ip addr add 192.168.12.2/24 dev eth1
+        - ip route replace 0/0 via 192.168.12.1
+    
+    PC5:
+      exec:
+        - ip addr add 192.168.13.2/24 dev eth1
+        - ip route replace 0/0 via 192.168.13.1
+
+    PC6:
+      exec:
+        - ip addr add 192.168.9.2/24 dev eth1
+        - ip route replace 0/0 via 192.168.9.1
       
 
   links:
-    - endpoints: ["router1:eth1", "router4:eth1"]
+    - endpoints: ["router1:eth1", "routerHub:eth1"]
     - endpoints: ["router1:eth3", "router2:eth3"]
-    - endpoints: ["router2:eth1", "router4:eth2"]
-    - endpoints: ["router3:eth1", "router4:eth3"]
+    - endpoints: ["router2:eth1", "routerHub:eth2"]
+    - endpoints: ["router3:eth1", "routerHub:eth3"]
+    - endpoints: ["srlrouter1:e1-1", "routerHub:eth4"]
+    - endpoints: ["router4:eth1", "routerHub:eth5"]
+    - endpoints: ["router5:eth1", "routerHub:eth6"]
+    - endpoints: ["router4:eth3", "router5:eth3"]
     - endpoints: ["PC1:eth1", "router1:eth2"]
     - endpoints: ["PC2:eth1", "router2:eth2"]
     - endpoints: ["PC3:eth1", "router3:eth2"]
+    - endpoints: ["PC4:eth1", "router4:eth2"]
+    - endpoints: ["PC5:eth1", "router5:eth2"]
+    - endpoints: ["PC6:eth1", "srlrouter1:e1-2"]
