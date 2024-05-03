@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Run docker exec and pings as an if statment and says if the ping was a Success or Fail
 echo "Testing connection between PC1 and Router1..."
 if sudo docker exec clab-project-PC1 ping -c1 192.168.1.1 >/dev/null; then
     echo "Connection test between PC1 and Router1: Success"

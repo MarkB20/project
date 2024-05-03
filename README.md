@@ -19,6 +19,17 @@ The following requirements must be satisfied to let containerlab tool run succes
 
 ***********************************************************************************************************
 
+# install 
+
+1. [docker install guide for debian](https://docs.docker.com/engine/install/debian/)
+
+2. [Containerlab install](https://containerlab.dev/install/)
+
+3. [docker pull Nokia SR Linux router](https://github.com/nokia/srlinux-container-image)
+
+
+***********************************************************************************************************
+
 # commands
 1. start docker
 ```
