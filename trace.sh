@@ -7,6 +7,7 @@ declare -A connections=(
     ["PC2 to PC3"]="192.168.6.2"
     ["PC3 to PC4"]="192.168.12.2"
     ["PC4 to PC5"]="192.168.13.2"
+    ["PC1 to PC6"]="192.168.9.2"
 )
 
 # Initialize an empty array to store the results of each connection test

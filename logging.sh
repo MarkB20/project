@@ -15,13 +15,13 @@ capture_traffic() {
     echo "Traffic capture on interface $interface of $router completed. Log file saved to $output_file."
 }
 
-# Capture traffic for each interface on router4
-capture_traffic "router4" "eth1"
-capture_traffic "router4" "eth2"
-capture_traffic "router4" "eth3"
-capture_traffic "router4" "eth4"
-capture_traffic "router4" "eth5"
-capture_traffic "router4" "eth6"
+# Capture traffic for each interface on routerHub
+capture_traffic "routerHub" "eth1"
+capture_traffic "routerHub" "eth2"
+capture_traffic "routerHub" "eth3"
+capture_traffic "routerHub" "eth4"
+capture_traffic "routerHub" "eth5"
+capture_traffic "routerHub" "eth6"
 
 
 

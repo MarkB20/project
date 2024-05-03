@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Define the dialog menu properties
-HEIGHT=15
-WIDTH=40
+HEIGHT=13
+WIDTH=30
 CHOICE_HEIGHT=4
-BACKTITLE="System Operations"
-TITLE="Run Your Scripts"
+BACKTITLE="Project tests"
+TITLE="select to run"
 MENU="Choose a script to run:"
 
 # Define the menu options
